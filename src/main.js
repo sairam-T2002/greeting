@@ -119,7 +119,7 @@ class AnniversaryCard {
   createTable() {
     // Try to load GLTF model first, fallback to basic geometry
     this.loader.load(
-      './src/models/antique_table.glb', // Update path as needed
+      '/models/antique_table.glb', // Update path as needed
       (gltf) => {
         this.table = gltf.scene;
         this.table.scale.set(.35, .35, .35);
@@ -171,7 +171,7 @@ class AnniversaryCard {
 
   createCake() {
     this.loader.load(
-      './src/models/cake.glb', // Update path as needed
+      '/models/cake.glb', // Update path as needed
       (gltf) => {
         this.cake = gltf.scene;
         this.cake.scale.set(.06, .06, .06);
