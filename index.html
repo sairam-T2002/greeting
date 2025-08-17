@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Two Year Anniversary - For My Love</title>
+    <link rel="stylesheet" href="src/style.css">
+  </head>
+  <body>
+    <div class="loading" id="loading">
+      💕 Loading our special moment... 💕
+    </div>
+    
+    <div id="app"></div>
+    
+    <div class="controls-hint">
+      💡 Left-click: Rotate | Right-click / 2 fingers: Pan | Scroll: Zoom
+    </div>
+    
+    <script>
+      // Hide loading screen after a short delay
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          const loading = document.getElementById('loading');
+          if (loading) {
+            loading.style.opacity = '0';
+            loading.style.transition = 'opacity 1s ease-out';
+            setTimeout(() => loading.remove(), 1000);
+          }
+        }, 2000);
+      });
+    </script>
+    
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
